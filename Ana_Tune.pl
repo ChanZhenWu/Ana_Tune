@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 print "\n";
 print "*******************************************************************************\n";
-print "  ALL Analog Parameter Tune Tool (v7.2)\n";
+print "  ALL Analog Parameter Tune Tool (v7.3)\n";
 print "  Author: Noon Chen\n";
 print "  A Professional Tool for Test.\n";
 print "  ",scalar localtime;
@@ -11,22 +11,26 @@ print "\n";
 
 #########################################################################################
 #print "  Checking In: ";
+use Term::ReadKey;
 
 #system "stty -echo";
-#print "  Password: ";
-#chomp($Ccode = <STDIN>);
-#print "\n";
+ReadMode('noecho'); # Disable echoing of characters
+
+print "  Password: ";
+chomp($Ccode = <STDIN>);
+print "\n";
 #system "stty echo";
-#
-#  if ($Ccode ne "\@testpro")
-#  #if ($Ccode ne "TestPro")
-#   	{
-#   		print "  >>> password Wrong!\n"; goto END_Prog;
-#   	}
-#  else
-#  	{
-#   		print "  >>> password Correct.\n\n";
-#  	}
+ReadMode('restore'); # Restore terminal mode
+
+  if ($Ccode ne "\@testpro")
+  #if ($Ccode ne "TestPro")
+   	{
+   		print "  >>> password Wrong!\n"; goto END_Prog;
+   	}
+  else
+  	{
+   		print "  >>> password Correct.\n\n";
+  	}
 
 
 ############################ Excel ######################################################
