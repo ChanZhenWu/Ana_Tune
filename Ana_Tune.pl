@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 print "\n";
 print "*******************************************************************************\n";
-print "  ALL Analog Parameter Tune Tool (v7.3)\n";
+print "  ALL Analog Parameter Tune Tool (v7.4)\n";
 print "  Author: Noon Chen\n";
 print "  A Professional Tool for Test.\n";
 print "  ",scalar localtime;
@@ -88,8 +88,8 @@ open COMP,"<$analogfiles";
       	if (substr($line,0,4) eq "fuse")
       	{
         #printf LIST "%-20s", substr($analogfiles,7,length($analogfiles)); print LIST $line,"\n";  #output origional
-        printf LIST "%-30s", $analogfiles;                                                         #comp name
-        printf LIST "%-20s", "fuse";                                                            	 #comp type
+        printf LIST "%-45s", $analogfiles;                                                         #comp name
+        printf LIST "%-20s", "\t\tfuse";                                                            	 #comp type
         $parameter = substr($line,index($line,"\ ")+1,length($line));                              #parameter
         $parameter =~ s/\s//g;
         #print $parameter;
@@ -132,8 +132,8 @@ open COMP,"<$analogfiles";
       	if (substr($line,0,6) eq "jumper")
       	{
         #printf LIST "%-20s", substr($analogfiles,7,length($analogfiles)); print LIST $line,"\n";  #output origional
-        printf LIST "%-30s", $analogfiles;                                                         #comp name
-        printf LIST "%-20s", "jumper";                                                             #comp type
+        printf LIST "%-45s", $analogfiles;                                                         #comp name
+        printf LIST "%-20s", "\t\tjumper";                                                             #comp type
         $parameter = substr($line,index($line,"\ ")+1,length($line));                              #parameter
         $parameter =~ s/\s//g;
         #print $parameter;
@@ -173,8 +173,8 @@ open COMP,"<$analogfiles";
       	if (substr($line,0,9) eq "capacitor")
       	{
         #printf LIST "%-20s", substr($analogfiles,7,length($analogfiles)); print LIST $line,"\n";  #output origional
-        printf LIST "%-30s", $analogfiles;                                                         #comp name
-        printf LIST "%-20s", "capacitor";                                                          #comp type
+        printf LIST "%-45s", $analogfiles;                                                         #comp name
+        printf LIST "%-20s", "\t\tcapacitor";                                                          #comp type
         $parameter = substr($line,index($line,"\ ")+1,length($line));                              #parameter
         $parameter =~ s/\s//g;
         #print $parameter;
@@ -214,8 +214,8 @@ open COMP,"<$analogfiles";
       	if (substr($line,0,8) eq "resistor")
       	{
         #printf LIST "%-20s", substr($analogfiles,7,length($analogfiles)); print LIST $line,"\n";  #output origional
-        printf LIST "%-30s", $analogfiles;                                                         #comp name
-        printf LIST "%-20s", "resistor";                                                           #comp type
+        printf LIST "%-45s", $analogfiles;                                                         #comp name
+        printf LIST "%-20s", "\t\tresistor";                                                           #comp type
         $parameter = substr($line,index($line,"\ ")+1,length($line));                              #parameter
         $parameter =~ s/\s//g;
         #print $parameter;
@@ -255,8 +255,8 @@ open COMP,"<$analogfiles";
       	if (substr($line,0,8) eq "inductor")
       	{
         #printf LIST "%-20s", substr($analogfiles,7,length($analogfiles)); print LIST $line,"\n";  #output origional
-        printf LIST "%-30s", $analogfiles;                                                         #comp name
-        printf LIST "%-20s", "inductor";                                                           #comp type
+        printf LIST "%-45s", $analogfiles;                                                         #comp name
+        printf LIST "%-20s", "\t\tinductor";                                                           #comp type
         $parameter = substr($line,index($line,"\ ")+1,length($line));                              #parameter
         $parameter =~ s/\s//g;
         #print $parameter;
@@ -297,8 +297,8 @@ open COMP,"<$analogfiles";
       	if (substr($line,0,5) eq "zener")
       	{
         #printf LIST "%-20s", substr($analogfiles,7,length($analogfiles)); print LIST $line,"\n";  #output origional
-        printf LIST "%-30s", $analogfiles;                                                         #comp name
-        printf LIST "%-20s", "zener";                                                              #comp type
+        printf LIST "%-45s", $analogfiles;                                                         #comp name
+        printf LIST "%-20s", "\t\tzener";                                                              #comp type
         $parameter = substr($line,index($line,"\ ")+1,length($line));                              #parameter
         $parameter =~ s/\s//g;
         #print $parameter;
@@ -341,8 +341,8 @@ open COMP,"<$analogfiles";
           and $multi == -1)
       	{
         #printf LIST "%-20s", substr($analogfiles,7,length($analogfiles)); print LIST $line,"\n";  #output origional
-        printf LIST "%-30s", $analogfiles;                                                         #comp name
-        printf LIST "%-20s", "diode";                                                              #comp type
+        printf LIST "%-45s", $analogfiles;                                                         #comp name
+        printf LIST "%-20s", "\t\tdiode";                                                              #comp type
         $parameter = substr($line,index($line,"\ ")+1,length($line));                              #parameter
         $parameter =~ s/\s//g;
         #print $parameter;
@@ -385,8 +385,8 @@ open COMP,"<$analogfiles";
           and $multi > -1)
       	{
         #printf LIST "%-20s", substr($analogfiles,7,length($analogfiles)); print LIST $line,"\n";  #output origional
-        printf LIST "%-30s", $analogfiles;                                                         #comp name
-        printf LIST "%-10s", "diode";                                                              #comp type
+        printf LIST "%-45s", $analogfiles;                                                         #comp name
+        printf LIST "%-10s", "\t\tdiode";                                                              #comp type
         $parameter = substr($line,index($line,"\ ")+1,length($line));                              #parameter
         $parameter =~ s/\s//g;
         #print $parameter."\n";
